@@ -10,7 +10,7 @@ const navItems = [
   { label: "my works", href: "/works", Icon: FolderIcon },
   { label: "tools", href: "/tools", Icon: CodeIcon },
   { label: "about me", href: "/about", Icon: UserIcon },
-  { label: "reach out", href: "/contact", Icon: MailIcon },
+  { label: "reach out", href: "/reach-out", Icon: MailIcon },
 ];
 
 export default function Home() {
