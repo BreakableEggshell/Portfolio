@@ -18,8 +18,8 @@ const navItems = [
 
 // TODO: replace with the real profile URLs.
 const socials = [
-  { label: "GitHub", href: "https://github.com/", Icon: GithubIcon },
-  { label: "LinkedIn", href: "https://www.linkedin.com/", Icon: LinkedinIcon },
+  { label: "GitHub", href: "https://github.com/BreakableEggshell", Icon: GithubIcon },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/triciagubaton/", Icon: LinkedinIcon },
 ];
 
 export default function Home() {
