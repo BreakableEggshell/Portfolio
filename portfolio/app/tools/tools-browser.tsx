@@ -15,25 +15,33 @@ function ToolChip({ tool, view }: { tool: Tool; view: View }) {
   }
   const { icon, src, abbr, name } = tool;
   return (
-    <li
-      title={name}
-      aria-label={name}
-      className={`${chip} flex size-10 items-center justify-center text-xs font-bold`}
-    >
-      {icon ? (
-        <svg
-          viewBox={`0 0 ${icon.width} ${icon.height}`}
-          className="size-6"
-          aria-hidden
-          // Trusted SVG markup from the icon packages, resolved at build time.
-          dangerouslySetInnerHTML={{ __html: icon.body }}
-        />
-      ) : src ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={src} alt="" className="size-6" />
-      ) : (
-        abbr
-      )}
+    <li className="group relative size-10" aria-label={name} tabIndex={0}>
+      {/* Springy overshoot makes the chip pop up on hover */}
+      <div
+        className={`${chip} flex size-full items-center justify-center text-xs font-bold transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] motion-safe:group-hover:-translate-y-1.5 motion-safe:group-focus-visible:-translate-y-1.5`}
+      >
+        {icon ? (
+          <svg
+            viewBox={`0 0 ${icon.width} ${icon.height}`}
+            className="size-6"
+            aria-hidden
+            // Trusted SVG markup from the icon packages, resolved at build time.
+            dangerouslySetInnerHTML={{ __html: icon.body }}
+          />
+        ) : src ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={src} alt="" className="size-6" />
+        ) : (
+          abbr
+        )}
+      </div>
+      {/* Appears and rises together with the chip, on the same timing */}
+      <span
+        aria-hidden
+        className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-3 -translate-x-1/2 whitespace-nowrap rounded-md bg-ink px-2.5 py-1 text-xs font-medium text-white opacity-0 transition-[opacity,translate] duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] group-hover:opacity-100 group-focus-visible:opacity-100 motion-safe:group-hover:-translate-y-1.5 motion-safe:group-focus-visible:-translate-y-1.5"
+      >
+        {name}
+      </span>
     </li>
   );
 }
