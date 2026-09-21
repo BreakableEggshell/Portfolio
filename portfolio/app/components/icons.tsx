@@ -63,3 +63,14 @@ export function LinkedinIcon(props: IconProps) {
     </svg>
   );
 }
+
+export function RepeatIcon(props: IconProps) {
+  return (
+    <svg {...outline} {...props}>
+      <path d="m21 5 4 4-4 4" />
+      <path d="M5 15v-2a4 4 0 0 1 4-4h16" />
+      <path d="m11 27-4-4 4-4" />
+      <path d="M27 17v2a4 4 0 0 1-4 4H7" />
+    </svg>
+  );
+}
