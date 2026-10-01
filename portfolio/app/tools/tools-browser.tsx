@@ -48,10 +48,10 @@ function ToolChip({ tool, view }: { tool: Tool; view: View }) {
 
 function Column({ groups, view }: { groups: Group[]; view: View }) {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-4">
       {groups.map(({ title, tools }) => (
         <section key={title}>
-          <h2 className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted">
+          <h2 className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted">
             {title}
           </h2>
           <ul className="flex flex-wrap gap-2">
@@ -77,7 +77,7 @@ export function ToolsBrowser({
   const next = view === "icons" ? "names" : "icons";
 
   return (
-    <div className="flex min-h-[420px] flex-col items-start gap-3 px-8 py-12 sm:min-h-[536px] sm:px-16">
+    <div className="flex flex-1 flex-col items-start gap-3 px-8 py-8 sm:px-16">
       <Link
         href="/"
         className="text-sm text-muted transition-colors hover:text-ink"
@@ -100,7 +100,7 @@ export function ToolsBrowser({
         </button>
       </div>
 
-      <div className="mt-3 grid w-full gap-6 md:grid-cols-2 md:gap-x-12">
+      <div className="mt-2 grid w-full gap-4 md:grid-cols-2 md:gap-x-12">
         <Column groups={left} view={view} />
         <Column groups={right} view={view} />
       </div>

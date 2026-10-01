@@ -16,7 +16,7 @@ const navItems = [
 export default function Home() {
   return (
     <>
-      <div className="flex min-h-[420px] flex-col items-center justify-center gap-4 px-6 py-12 text-center sm:min-h-[536px]">
+      <div className="flex flex-1 flex-col items-center justify-center gap-4 px-6 py-8 text-center">
         <p className="text-3xl text-ink">Welcome!</p>
         <h1 className="text-3xl font-bold text-ink sm:text-[40px] sm:leading-[48px]">
           I&apos;m <span className="text-accent">Tricia Gubaton</span>

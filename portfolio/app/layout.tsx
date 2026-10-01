@@ -24,7 +24,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${inter.variable} ${robotoMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="h-full flex flex-col overflow-hidden font-sans">
         <PageShell>{children}</PageShell>
       </body>
     </html>
