@@ -29,7 +29,7 @@ export default function ReachOut() {
       </Link>
       <h1 className="text-2xl font-bold text-ink sm:text-[28px]">reach out</h1>
       <p className="text-base text-ink/80 sm:text-lg">
-        Got an idea? Let&apos;s hear it
+        Got an idea? Let&apos;s work on it!
       </p>
 
       <div className="mt-2 flex w-full flex-col gap-3">
@@ -47,7 +47,7 @@ export default function ReachOut() {
       </div>
 
       <p className="text-sm text-muted">
-        I may take 1-2 days to reply back.
+        I usually reply within the day
       </p>
     </div>
   );
